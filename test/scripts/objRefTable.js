@@ -1,0 +1,72 @@
+const C3 = self.C3;
+self.C3_GetObjectRefTable = function () {
+	return [
+		C3.Plugins.Tilemap,
+		C3.Behaviors.solid,
+		C3.Plugins.Sprite,
+		C3.Behaviors.Platform,
+		C3.Behaviors.scrollto,
+		C3.Plugins.Keyboard,
+		C3.Plugins.TiledBg,
+		C3.Plugins.Text,
+		C3.Plugins.Button,
+		C3.Plugins.Mouse,
+		C3.Behaviors.Bullet,
+		C3.Plugins.Keyboard.Cnds.OnKey,
+		C3.Plugins.Sprite.Acts.SetAnim,
+		C3.Behaviors.Platform.Cnds.IsOnFloor,
+		C3.Behaviors.Platform.Cnds.IsMoving,
+		C3.Plugins.Sprite.Cnds.CompareOpacity,
+		C3.Plugins.System.Acts.SetVar,
+		C3.Plugins.System.Cnds.CompareVar,
+		C3.Plugins.Sprite.Acts.SetOpacity,
+		C3.Plugins.Sprite.Exps.Opacity,
+		C3.Plugins.Mouse.Cnds.OnObjectClicked,
+		C3.Plugins.System.Acts.GoToLayout,
+		C3.Plugins.Mouse.Cnds.IsOverObject,
+		C3.Plugins.Mouse.Cnds.OnClick,
+		C3.Plugins.Sprite.Acts.Spawn
+	];
+};
+self.C3_JsPropNameTable = [
+	{Твёрдый: 0},
+	{КартаТайлов: 0},
+	{Платформер: 0},
+	{СледитьЗа: 0},
+	{Спрайт: 0},
+	{Клавиатура: 0},
+	{Спрайт2: 0},
+	{Спрайт3: 0},
+	{Спрайт4: 0},
+	{Спрайт5: 0},
+	{ТайловыйФон: 0},
+	{ТайловыйФон2: 0},
+	{Спрайт6: 0},
+	{Текст: 0},
+	{Кнопка: 0},
+	{Спрайт7: 0},
+	{Мышь: 0},
+	{Спрайт8: 0},
+	{Пуля: 0},
+	{Спрайт9: 0},
+	{state: 0}
+];
+
+self.InstanceType = {
+	КартаТайлов: class extends self.ITilemapInstance {},
+	Спрайт: class extends self.ISpriteInstance {},
+	Клавиатура: class extends self.IInstance {},
+	Спрайт2: class extends self.ISpriteInstance {},
+	Спрайт3: class extends self.ISpriteInstance {},
+	Спрайт4: class extends self.ISpriteInstance {},
+	Спрайт5: class extends self.ISpriteInstance {},
+	ТайловыйФон: class extends self.ITiledBackgroundInstance {},
+	ТайловыйФон2: class extends self.ITiledBackgroundInstance {},
+	Спрайт6: class extends self.ISpriteInstance {},
+	Текст: class extends self.ITextInstance {},
+	Кнопка: class extends self.IButtonInstance {},
+	Спрайт7: class extends self.ISpriteInstance {},
+	Мышь: class extends self.IInstance {},
+	Спрайт8: class extends self.ISpriteInstance {},
+	Спрайт9: class extends self.ISpriteInstance {}
+}
